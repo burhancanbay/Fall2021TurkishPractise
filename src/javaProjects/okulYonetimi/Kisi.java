@@ -2,9 +2,9 @@ package javaProjects.okulYonetimi;
 
 public class Kisi {
 
-	String adSoyad;
-	String kimlikNo;
-	int yas;
+	private String adSoyad;
+	private String kimlikNo;
+	private int yas;
 	
 	
 	
@@ -14,6 +14,7 @@ public class Kisi {
 		this.kimlikNo = kimlikNo;
 		this.yas = yas;
 	}
+	
 	public String getAdSoyad() {
 		return adSoyad;
 	}
@@ -30,8 +31,13 @@ public class Kisi {
 		return yas;
 	}
 	public void setYas(int yas) {
-		this.yas = yas;
-	}
+        if (yas <0) {
+            this.yas=-yas;
+        }
+        else
+        this.yas = yas;
+    }
+
 	@Override
 	public String toString() {
 		return "Kisi [adSoyad=" + adSoyad + ", kimlikNo=" + kimlikNo + ", yas=" + yas + "]";

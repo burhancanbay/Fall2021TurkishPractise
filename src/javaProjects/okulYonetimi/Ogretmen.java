@@ -21,11 +21,7 @@ public class Ogretmen extends Kisi{
 	public void setBolum(String bolum) {
 		this.bolum = bolum;
 	}
-	@Override
-	public String toString() {
-		return "Ogretmen [sicilNo=" + sicilNo + ", bolum=" + bolum + ", adSoyad=" + adSoyad + ", kimlikNo=" + kimlikNo
-				+ ", yas=" + yas + "]";
-	}
+	
 
 	
 	

@@ -26,6 +26,7 @@ public class FilmTahminOyunu {
 		filmListesi.add("Cesur Yürek");
 		filmListesi.add("Zübük");
 		
+		@SuppressWarnings("resource")
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Lütfen 1'den "+filmListesi.size()+"'a kadar bir sayi girin..");
 		int sira=scan.nextInt()-1;

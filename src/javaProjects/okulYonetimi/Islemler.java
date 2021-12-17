@@ -17,21 +17,21 @@ import java.util.Scanner;
 		Aşağıdaki gibi bir menü gösterilsin.
 
 	====================================
-	 Ö�?RENCİ VE Ö�?RETMEN YÖNETİM PANELİ
+	 Ö�?RENCİ VE Ö�?RETMEN YÖNETİM PANELİ
 	====================================
-	 1- Ö�?RENCİ İ�?LEMLERİ
-	 2- Ö�?RETMEN İ�?LEMLERİ
-	 Q- ÇIKI�?
+	 1- Ö�?RENCİ İ�?LEMLERİ
+	 2- Ö�?RETMEN İ�?LEMLERİ
+	 Q- ÇIKI�?
 
 	3.	Seçilen Kişi türüne göre aşağıdaki işlemleri gösteren bir alt menü daha gösterilsin.
 
-	============= İ�?LEMLER =============
+	============= İ�?LEMLER =============
 		 1-EKLEME
 		 2-ARAMA
 		 3-LİSTELEME
 		 4-SİLME
 		 5-ANA MENÜ
-		 Q-ÇIKI�?
+		 Q-ÇIKI�?
 
 	SEÇİMİNİZ:
 
@@ -49,9 +49,9 @@ public class Islemler {
 	static String kisiTuru;
 
 	public static void anaMenu() {
-		System.out.println("====================================\n" + "     Ö�?RENCİ VE Ö�?RETMEN YÖNETİM PANELİ\n"
-				+ "    ====================================\n" + "     1- Ö�?RENCİ İ�?LEMLERİ\n"
-				+ "     2- Ö�?RETMEN İ�?LEMLERİ\n" + "     Q- ÇIKI�?\n" + "");
+		System.out.println("====================================\n" + "     Ö�?RENCİ VE Ö�?RETMEN YÖNETİM PANELİ\n"
+				+ "    ====================================\n" + "     1- Ö�?RENCİ İ�?LEMLERİ\n"
+				+ "     2- Ö�?RETMEN İ�?LEMLERİ\n" + "     Q- ÇIKI�?\n" + "");
 
 		System.out.println("Isleminizi seciniz : ");
 		String secim = scan.next().toUpperCase();
@@ -85,8 +85,8 @@ public class Islemler {
 
 	private static void islemMenusu() {
 		System.out.println("3. Seçilen Kişi türüne göre aşağıdaki işlemleri gösteren bir alt menü daha gösterilsin.\r\n"
-				+ "============= İ�?LEMLER =============\r\n" + "     1-EKLEME\r\n" + "     2-ARAMA\r\n"
-				+ "     3-LİSTELEME\r\n" + "     4-SİLME\r\n" + "     5-ANA MENÜ\r\n" + "     0-ÇIKI�?");
+				+ "============= İ�?LEMLER =============\r\n" + "     1-EKLEME\r\n" + "     2-ARAMA\r\n"
+				+ "     3-LİSTELEME\r\n" + "     4-SİLME\r\n" + "     5-ANA MENÜ\r\n" + "     0-ÇIKI�?");
 
 		System.out.println("Islem tercihinizi giriniz : ");
 		int tercih = scan.nextInt();
@@ -134,7 +134,7 @@ public class Islemler {
 			for (Kisi k : ogrenciList) {
 				if (k.getKimlikNo().contains(silOgrcKimlik)) {
 					ogrenciList.remove(k);
-					
+					System.out.println("silinen ogrenci"+k);
 					kontrol=false;
 				} 
 			}
@@ -185,9 +185,12 @@ public class Islemler {
 			System.out.println("aradiginiz ogrenci kimlik no giriniz : ");
 			String araOgrcKimlik=scan.next();
 			
+			
 			for (Kisi k : ogrenciList) {
 				if (k.getKimlikNo().contains(araOgrcKimlik)) {
+					  System.out.println("aradiginiz ogrenci : " + k.getAdSoyad());
 					kontrol=false;
+				
 				} 
 			}
 			if (kontrol) {
@@ -199,6 +202,7 @@ public class Islemler {
 			
 			for (Kisi k : ogretmenList) {
 				if (k.getKimlikNo().contains(araOgrtKimlik)) {
+					  System.out.println("aradiginiz ogretmen : " + k.getAdSoyad());
 					kontrol=false;
 				} 
 			}

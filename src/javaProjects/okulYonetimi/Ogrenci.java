@@ -6,6 +6,7 @@ String numara;
 String sinif;
 
 
+
 public Ogrenci(String adSoyad, String kimlikNo, int yas, String numara, String sinif) {
 	super(adSoyad, kimlikNo, yas);
 	this.numara = numara;
@@ -33,14 +34,17 @@ public void setSinif(String sinif) {
 }
 
 
+
 @Override
 public String toString() {
-	return "Ogrenci [numara=" + numara + ", sinif=" + sinif + ", adSoyad=" + adSoyad + ", kimlikNo=" + kimlikNo
-			+ ", yas=" + yas + "]";
+    return "Ogrenci{" +"ad soyad="+getAdSoyad()+", kimlik No="+getKimlikNo()+", yas="+getYas()+
+            ", numara='" + numara + '\'' +
+            ", sinif='" + sinif + '\'' +
+            '}';
+
+
+
 }
-
-
-
 	
 	}
 
